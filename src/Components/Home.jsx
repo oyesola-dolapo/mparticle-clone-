@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="h-max w-screen bg-primaryColor text-white px-0">
+      <section className="h-max w-screen bg-primaryColor text-white selection:text-primaryColor px-0">
         <div className="w-full pt-8 px-6">
           <h1 className="headers text-center">
             Turn customer data into customer joy
@@ -40,12 +40,12 @@ export default function Home() {
             to deliver intelligent and adaptive customer experiences in the
             moments that matter, across any screen or device.
           </p>
-          <div className="flex justify-center gap-6 font-bold">
-            <button className="bg-secondaryColor text-black rounded-md px-6 py-3 text-sm">
+          <div className="flex justify-center gap-6 font-bold text-sm">
+            <button className="bg-secondaryColor text-black rounded-md px-6 py-3">
               Get a demo
             </button>
 
-            <button className="rounded-md border-[1px] border-white px-6 py-3 text-sm">
+            <button className="rounded-md border-[1px] border-white px-6 py-3 hover:text-black hover:bg-white transition duration-150">
               Contact Us
             </button>
           </div>
