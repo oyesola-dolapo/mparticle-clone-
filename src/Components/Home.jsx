@@ -51,7 +51,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full h-[54vh] mt-10">
+        <div className="w-full h-[50vh] mt-10">
           <img
             src="./assets/images/heroImg.avif"
             alt=""
