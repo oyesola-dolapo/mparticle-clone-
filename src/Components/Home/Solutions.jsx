@@ -63,7 +63,7 @@ export default function Solutions() {
                 <p className="py-3 text-lg">{item.title}</p>
                 <p className="opacity-[50%]">{item.subtitle}</p>
               </div>
-              <a href="#" className="underline">
+              <a href="#" className="underline font-bold">
                 {item.link.title}
               </a>
             </a>
