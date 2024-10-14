@@ -53,15 +53,15 @@ export default function Solutions() {
           return (
             <a
               href="#"
-              className="min-w-[87%] h-[40rem] flex flex-col justify-between">
+              className="min-w-[87%] flex flex-col justify-between">
               <div>
                 <img
                   src={item.img}
                   alt=""
-                  className="object-cover w-full h-[24rem]"
+                  className="object-cover w-full"
                 />
                 <p className="py-3 text-[1.1rem]">{item.title}</p>
-                <p className="opacity-[50%] text-md">{item.subtitle}</p>
+                <p className="opacity-[50%] text-md mb-10">{item.subtitle}</p>
               </div>
               <a href="#" className="underline font-bold">
                 {item.link.title}
