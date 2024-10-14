@@ -83,11 +83,13 @@ export default function Solutions() {
         Solutions you can <br /> rely on
       </h1>
       <div
-        className="w-full flex overflow-scroll gap-6 mt-6"
+        className="w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
         ref={scrollContainerRef}>
         {solutions.map((item) => {
           return (
-            <a href="#" className="min-w-[87%] flex flex-col justify-between">
+            <a
+              href="#"
+              className="min-w-[87%] flex flex-col justify-between snap-start">
               <div>
                 <img src={item.img} alt="" className="object-cover w-full" />
                 <p className="py-3 text-[1.1rem]">{item.title}</p>
