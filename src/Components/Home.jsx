@@ -1,4 +1,5 @@
 import React from "react";
+import Scroll from "./animation/Scroll";
 
 export default function Home() {
   const do_more = [
@@ -51,7 +52,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full h-[50vh] mt-10">
+        <div className="h-[50vh] w-screen relative mt-10" >
+          <div className="absolute top-0 left-0 mx-6">
+            <Scroll />
+          </div>
           <img
             src="./assets/images/heroImg.avif"
             alt=""

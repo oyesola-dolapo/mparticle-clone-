@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,4 +26,59 @@ section {
 
 .mono {
   font-family: Roboto Mono;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX();
+  }
+}
+
+.scroll {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll::after,
+.scroll::before {
+  content: "";
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  z-index: 99;
+}
+
+.scroll::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #2c2d2b);
+}
+
+.scroll:before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #2c2d2b);
+}
+
+.scroll-slide {
+  display: flex;
+  align-items: center;
+  animation: slide 30s infinite linear;
+  opacity: 70%;
+}
+
+.scroll-slide img {
+  margin: 0 20px;
 }
