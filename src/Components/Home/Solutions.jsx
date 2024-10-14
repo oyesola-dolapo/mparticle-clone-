@@ -11,9 +11,19 @@ export default function Solutions() {
       link: {
         title: "Unified view",
       },
-    },
+      },
+      {
+        key: 2,
+        title: "Grow lifetime value",
+        subtitle:
+          "Accelerate revenue per customer with multi-channel audience activation, churn prevention, loyalty and engagement enhancement, uplift/increment testing, improved ad targeting, and implementing next best action decisions. ",
+        img: "./assets/images/growValue.avif",
+        link: {
+          title: "Grow value",
+        },
+      },
     {
-      key: 2,
+      key: 3,
       title: "Understand customer journeys",
       subtitle:
         "AI-driven predictions and analytics unlock game-changing insights to drive more engaging, personalized, cross channel experiences.",
@@ -23,7 +33,7 @@ export default function Solutions() {
       },
     },
     {
-      key: 3,
+      key: 4,
       title: "Lower acquisition costs",
       subtitle:
         "Use first-party data to grow your customer base for less. Use real-time suppression, leverage lookalike models, personalize content, and test your marketing efforts, all in one platform.",
@@ -32,16 +42,7 @@ export default function Solutions() {
         title: "Lower costs",
       },
     },
-    {
-      key: 4,
-      title: "Grow lifetime value",
-      subtitle:
-        "Accelerate revenue per customer with multi-channel audience activation, churn prevention, loyalty and engagement enhancement, uplift/increment testing, improved ad targeting, and implementing next best action decisions. ",
-      img: "./assets/images/growValue.avif",
-      link: {
-        title: "Grow value",
-      },
-    },
+    
   ];
   return (
     <section className="bg-white py-8">
