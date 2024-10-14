@@ -1,5 +1,7 @@
 import React from "react";
 import Scroll from "./animation/Scroll";
+import CustomerStory from "./CustomerStory";
+import Solutions from "./Solutions";
 
 export default function Home() {
   const do_more = [
@@ -52,7 +54,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-[50vh] w-screen relative mt-10" >
+        <div className="h-[50vh] w-screen relative mt-10">
           <div className="absolute top-0 left-0 mx-6">
             <Scroll />
           </div>
@@ -83,6 +85,12 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {/* CUSTOMER STORY */}
+      {/* <CustomerStory /> */}
+
+      {/* SOLUTIONS SECTION */}
+      <Solutions />
     </main>
   );
 }
