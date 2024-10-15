@@ -43,7 +43,7 @@ export default function Redefining() {
             })}
           </div>
 
-          <button className="rounded-md bg-secondaryColor px-6 py-3 text-sm font-medium mt-4">
+          <button className="rounded-md bg-secondaryColor px-6 py-3 text-sm font-bold mt-4">
             See all capabilities
           </button>
         </div>
@@ -63,7 +63,7 @@ export default function Redefining() {
             how customers interact with the mParticle platform.{" "}
           </p>
 
-          <button className="rounded-md bg-secondaryColor px-6 py-3 text-sm font-medium mt-4">
+          <button className="rounded-md bg-secondaryColor px-6 py-3 text-sm font-bold mt-4">
             Read announcement
           </button>
         </div>

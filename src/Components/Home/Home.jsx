@@ -3,6 +3,7 @@ import Scroll from "./animation/Scroll";
 import CustomerStory from "./CustomerStory";
 import Solutions from "./Solutions";
 import Redefining from "./Redefining";
+import Latest from "./Latest";
 
 export default function Home() {
   const do_more = [
@@ -95,6 +96,9 @@ export default function Home() {
 
       {/* REDEFINING SECTION */}
       <Redefining />
+
+      {/* LATEST SECTION */}
+      <Latest />
     </main>
   );
 }
