@@ -141,7 +141,7 @@ export default function Footer() {
 
         <p className="text-center pb-6">
           Developed by{" "}
-          <a href='https://ferrazi.netlify.app' className="text-secondaryColor underline">Dolapo Oyesola</a>
+          <a href='https://ferrazi.netlify.app' target="blank_" className="text-secondaryColor underline">Dolapo Oyesola</a>
         </p>
       </div>
     </footer>
