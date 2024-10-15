@@ -119,7 +119,7 @@ export default function Footer() {
                 }`}>
                 <ul className="mt-2">
                   {section.items.map((item, idx) => (
-                    <li key={idx} className="text-sm pb-2">
+                    <li key={idx} className="text-sm pb-3">
                       {item}
                     </li>
                   ))}
