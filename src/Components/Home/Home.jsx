@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-[50vh] w-screen relative mt-10">
+        <div className="h-[50vh] w-screen relative mt-10 select-none">
           <div className="absolute top-0 left-0 mx-6">
             <Scroll />
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
                 </p>
                 <h4 className="text-[22px] mt-4">{item.title}</h4>
                 <p className="opacity-[60%] mt-3">{item.subTitle}</p>
-                <img src={item.img} alt="" className="mt-6" />
+                <img src={item.img} alt="" className="mt-6 select-none" />
               </div>
             );
           })}
