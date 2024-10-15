@@ -22,7 +22,7 @@ export default function Redefining() {
     },
   ];
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-10 border-b-[.1px] border-primaryColor">
       <h1 className="headers">Redefining the CDP</h1>
       <div className="mt-8">
         <img src="./assets/images/cdp.avif" alt="" />
