@@ -57,7 +57,7 @@ section {
   height: 100%;
   width: 60px;
   position: absolute;
-  z-index: 99;
+  z-index: 1;
 }
 
 .scroll::after {
@@ -81,4 +81,11 @@ section {
 
 .scroll-slide img {
   margin: 0 20px;
+}
+
+.copy p {
+  flex-basis: 50%;
+  margin-bottom: 1.2rem;
+  font-size: 16px;
+  font-weight: 300;
 }
