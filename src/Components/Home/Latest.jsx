@@ -66,9 +66,7 @@ export default function Latest() {
 
   return (
     <section className="bg-white py-10 border-b-[.1px] border-primaryColor">
-      <h1 className="headers">
-        Solutions you can <br /> rely on
-      </h1>
+      <h1 className="text-2xl">Latest from mParticle</h1>
       <div
         className="w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
         ref={scrollContainerRef}>
