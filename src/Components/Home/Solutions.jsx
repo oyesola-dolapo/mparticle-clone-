@@ -89,7 +89,7 @@ export default function Solutions() {
           return (
             <a
               href="#"
-              className="min-w-[87%] flex flex-col justify-between snap-start">
+              className="min-w-[87%] flex flex-col justify-between snap-center">
               <div>
                 <img src={item.img} alt="" className="object-cover w-full" />
                 <p className="py-3 text-[1.1rem]">{item.title}</p>
