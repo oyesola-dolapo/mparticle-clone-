@@ -2,6 +2,7 @@ import React from "react";
 import Scroll from "./animation/Scroll";
 import CustomerStory from "./CustomerStory";
 import Solutions from "./Solutions";
+import Redefining from "./Redefining";
 
 export default function Home() {
   const do_more = [
@@ -67,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* DO MORE */}
-      <section className="text-black bg-white pt-10">
+      <section className="text-black bg-white py-10 border-b-[.5px] border-primaryColor">
         <h1 className="headers text-[38px]">Do more with more of your data</h1>
         <div className="">
           {do_more.map((item) => {
@@ -91,6 +92,9 @@ export default function Home() {
 
       {/* SOLUTIONS SECTION */}
       <Solutions />
+
+      {/* REDEFINING SECTION */}
+      <Redefining />
     </main>
   );
 }

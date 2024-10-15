@@ -78,7 +78,7 @@ export default function Solutions() {
   }, []);
 
   return (
-    <section className="bg-white py-8">
+    <section className="bg-white py-10 border-b-[.1px] border-primaryColor">
       <h1 className="headers">
         Solutions you can <br /> rely on
       </h1>
