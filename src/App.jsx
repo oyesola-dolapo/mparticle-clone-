@@ -6,25 +6,21 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    const saveScrollPosition = () => {
-      localStorage.setItem("scrollPosition", window.scrollY);
-    };
+    const savedScrollPosition = localStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+    }
 
-    window.addEventListener("beforeunload", saveScrollPosition);
+    const handleScroll = () => {
+      localStorage.setItem('scrollPosition', window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("beforeunload", saveScrollPosition);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    const scrollPosition = localStorage.getItem("scrollPosition");
-
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition));
-    }
-  }, []);
-  
   return (
     <Router>
       <main>
