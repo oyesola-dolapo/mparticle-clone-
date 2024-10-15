@@ -5,21 +5,21 @@ import Home from "./Components/Home/Home.jsx";
 import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    const savedScrollPosition = localStorage.getItem('scrollPosition');
-    if (savedScrollPosition) {
-      window.scrollTo(0, parseInt(savedScrollPosition));
-    }
+  // useEffect(() => {
+  //   const savedScrollPosition = localStorage.getItem('scrollPosition');
+  //   if (savedScrollPosition) {
+  //     window.scrollTo(0, parseInt(savedScrollPosition));
+  //   }
 
-    const handleScroll = () => {
-      localStorage.setItem('scrollPosition', window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll);
+  //   const handleScroll = () => {
+  //     localStorage.setItem('scrollPosition', window.scrollY);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <Router>
