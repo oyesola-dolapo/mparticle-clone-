@@ -1,6 +1,5 @@
 import React from "react";
 import Scroll from "./animation/Scroll";
-import CustomerStory from "./CustomerStory";
 import Solutions from "./Solutions";
 import Redefining from "./Redefining";
 import Latest from "./Latest";
