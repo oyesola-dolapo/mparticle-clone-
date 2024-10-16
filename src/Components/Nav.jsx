@@ -20,8 +20,8 @@ export default function Nav() {
 
   const handleSubMenu = (index) => {
     setOpenSubMenuIndex(openSubMenuIndex === index ? null : index);
-    document.body.style.overflow =
-      openSubMenuIndex !== null ? "auto" : "hidden";
+    // document.body.style.overflow =
+    //   openSubMenuIndex !== null ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function Nav() {
               </div>
 
               {openSubMenuIndex === index && (
-                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-6 pb-6 max-h-[calc(100vh-10px)] overflow-auto">
+                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-6 pb-6 overflow-auto">
                   <div className="flex justify-between items-center">
                     <p
                       className="font-semibold"
