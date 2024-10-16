@@ -36,11 +36,11 @@ export default function Home() {
   return (
     <main>
       <section className="h-max w-screen bg-primaryColor text-white selection:text-primaryColor px-0">
-        <div className="w-full pt-10 px-6 md:px-20">
+        <div className="w-full pt-10 px-6 md:px-20 lg:px-32">
           <h1 className="headers text-center">
             Turn customer data into customer joy
           </h1>
-          <p className="text-center text-[17px] md:text-lg my-6">
+          <p className="text-center text-[17px] md:text-lg lg:text-xl lg:w-[70%] lg:mx-auto lg:font-light lg:my-10 my-6">
             mParticle is the choice for multi-channel consumer brands who want
             to deliver intelligent and adaptive customer experiences in the
             moments that matter, across any screen or device.
@@ -57,14 +57,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-[50vh] w-screen relative mt-10 md:mt-20 select-none">
+        <div className=" w-screen relative mt-10 md:mt-20 select-none">
           <div className="absolute top-0 left-0 mx-6">
             <Scroll />
           </div>
           <img
             src="./assets/images/heroImg.avif"
             alt=""
-            className="h-full w-full object-cover"
+            className="h-[50vh] md:h-[90vh] md:object-contain w-full object-cover"
           />
         </div>
       </section>
@@ -75,7 +75,8 @@ export default function Home() {
         <div className="w-full">
           {do_more.map((item) => {
             return (
-              <div className={`mt-10 md:flex gap-10 items-center ${item.style}`}>
+              <div
+                className={`mt-10 md:flex gap-10 items-center ${item.style}`}>
                 <div className="md:w-[50%]">
                   <p className="text-sm mono">
                     <i class="fa-solid fa-circle text-secondaryColor"></i>{" "}
