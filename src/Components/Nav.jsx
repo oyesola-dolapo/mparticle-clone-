@@ -99,15 +99,6 @@ export default function Nav() {
         {
           title: "Developer docs",
         },
-        {
-          title: "Boost customer lifetime value",
-        },
-        {
-          title: "Drive operational efficiencies",
-        },
-        {
-          title: "Activate customer data from your warehouse",
-        },
       ],
     },
   ];
