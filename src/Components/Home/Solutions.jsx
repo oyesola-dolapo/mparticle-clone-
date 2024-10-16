@@ -115,14 +115,14 @@ export default function Solutions() {
         </div>
         <div className="flex gap-4">
           <button
-            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor"
+            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor disabled:opacity-[40%]"
             disabled={activeIndex === 0}
             onClick={scrollLeft}>
             <i class="fa-solid fa-arrow-left text-black"></i>
           </button>
           <button
-            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor"
-            disabled={activeIndex === 3}
+            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor disabled:opacity-[40%]"
+            disabled={activeIndex === solutions.length - 1}
             onClick={scrollRight}>
             <i class="fa-solid fa-arrow-right text-black"></i>
           </button>
