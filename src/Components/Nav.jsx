@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [navbarBg, setNavbarBg] = useState(false);
@@ -112,17 +113,38 @@ export default function Nav() {
         className={`w-full px-6 md:px-10 py-[1.8rem] flex justify-between items-center transition-all duration-300 ${
           navbarBg ? "bg-white text-black" : "bg-transparent text-white"
         }`}>
-        <h1
-          className={`font-bold text-lg md:text-2xl sm:text-xl select-none ${
-            menu ? "text-black" : ""
-          }`}>
-          mParticle
-        </h1>
+        <div className="flex gap-16 items-center">
+          <h1
+            className={`font-bold text-lg md:text-2xl sm:text-xl select-none ${
+              menu ? "text-black" : ""
+            }`}>
+            mParticle
+          </h1>
+
+          <div className="hidden xl:flex gap-6 items-center">
+            {nav.map((item, index) => {
+              return (
+                <a href="#" className="text-sm">
+                  {item.title}{" "}
+                  <i className="fa-solid fa-chevron-down text-sm"></i>
+                </a>
+              );
+            })}
+            <a href="#">Customer</a>
+          </div>
+        </div>
         <div className={`flex items-center gap-6 ${menu ? "text-black" : ""}`}>
-          <i className="fa-solid md:text-xl fa-magnifying-glass"></i>
+          <i className="fa-solid md:text-xl xl:text-sm fa-magnifying-glass"></i>
           <i
-            className="fa-solid fa-bars text-xl md:text-2xl cursor-pointer"
+            className="fa-solid fa-bars text-xl md:text-2xl cursor-pointer xl:hidden"
             onClick={handleMenu}></i>
+          <div className="hidden xl:flex gap-6 items-center text-sm">
+            <a href="#">Login</a>
+            <a href="#">Contact us</a>
+            <button className="bg-secondaryColor text-black rounded-md px-6 py-3 font-semibold text-sm">
+              Explore demo
+            </button>
+          </div>
         </div>
       </div>
 
