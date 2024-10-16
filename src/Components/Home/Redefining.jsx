@@ -28,7 +28,7 @@ export default function Redefining() {
         <img
           src="./assets/images/cdp.avif"
           alt=""
-          className="md:w-[55%] object-cover h-max"
+          className="md:w-[55%] object-cover md:max-h-max"
         />
         <div>
           <h3 className="text-xl w-[90%] mt-4 md:mt-0">
@@ -55,7 +55,11 @@ export default function Redefining() {
         </div>
       </div>
       <div className="mt-8 md:flex flex-row-reverse md:gap-10">
-        <img src="./assets/images/daa.avif" alt="" className="md:w-[55%] md:h-max" />
+        <img
+          src="./assets/images/daa.avif"
+          alt=""
+          className="md:w-[55%] md:max-h-max"
+        />
         <div>
           <h3 className="text-xl w-[90%] mt-4">
             One platform, one goal: Turning customer data into customer joy.
