@@ -94,19 +94,19 @@ export default function Nav() {
         menu ? "h-screen bg-white text-black" : "h-max"
       }`}>
       <div
-        className={`w-full px-6 py-[1.8rem] flex justify-between items-center transition-all duration-300 ${
+        className={`w-full px-6 md:px-10 py-[1.8rem] flex justify-between items-center transition-all duration-300 ${
           navbarBg ? "bg-white text-black" : "bg-transparent text-white"
         }`}>
         <h1
-          className={`font-bold text-lg sm:text-xl select-none ${
+          className={`font-bold text-lg md:text-2xl sm:text-xl select-none ${
             menu ? "text-black" : ""
           }`}>
           mParticle
         </h1>
         <div className={`flex items-center gap-6 ${menu ? "text-black" : ""}`}>
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid md:text-xl fa-magnifying-glass"></i>
           <i
-            className="fa-solid fa-bars text-xl cursor-pointer"
+            className="fa-solid fa-bars text-xl md:text-2xl cursor-pointer"
             onClick={handleMenu}></i>
         </div>
       </div>

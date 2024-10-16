@@ -65,8 +65,8 @@ export default function Latest() {
   }, []);
 
   return (
-    <section className="bg-white py-10 border-b-[.1px] border-primaryColor">
-      <h1 className="text-2xl">Latest from mParticle</h1>
+    <section className="bg-white py-10 md:p-12 border-b-[.1px] border-primaryColor">
+      <h1 className="text-2xl md:text-3xl">Latest from mParticle</h1>
       <div
         className="w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
         ref={scrollContainerRef}>
@@ -74,7 +74,7 @@ export default function Latest() {
           return (
             <a
               href="#"
-              className="min-w-[87%] flex flex-col justify-between snap-center">
+              className="min-w-[87%] md:min-w-[40%] flex flex-col justify-between snap-center">
               <div>
                 <img src={item.img} alt="" className="object-cover w-full" />
                 <p className="py-3 mono text-sm font-light">{item.title}</p>

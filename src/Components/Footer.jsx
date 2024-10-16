@@ -83,18 +83,22 @@ export default function Footer() {
     }
   };
   return (
-    <footer className="text-white px-6 pt-10 selection:text-primaryColor">
+    <footer className="text-white px-6 md:p-12 md:pb-6 pt-10 selection:text-primaryColor">
       <h3 className="text-xl">See what's possible with us</h3>
       <div className="mt-8">
-        {possible.map((item, index) => {
-          return (
-            <div key={index} className="border-[.5px] p-6 mb-8 flex flex-col">
-              <h4 className="text-lg mb-2">{item.title}</h4>
-              <p className="mb-14">{item.subtitle}</p>
-              <i className="fa-solid fa-arrow-right place-self-end"></i>
-            </div>
-          );
-        })}
+        <div className="md:flex md:gap-10">
+          {possible.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="border-[.5px] p-6 mb-8 flex flex-col md:basis-1/2">
+                <h4 className="text-lg mb-2">{item.title}</h4>
+                <p className="mb-14">{item.subtitle}</p>
+                <i className="fa-solid fa-arrow-right place-self-end"></i>
+              </div>
+            );
+          })}
+        </div>
 
         <div className="footer-accordion border-t-[.5px]">
           {footer.map((section, index) => (
@@ -141,7 +145,12 @@ export default function Footer() {
 
         <p className="text-center pb-6">
           Developed by{" "}
-          <a href='https://ferrazi.netlify.app' target="blank_" className="text-secondaryColor underline">Dolapo Oyesola</a>
+          <a
+            href="https://ferrazi.netlify.app"
+            target="blank_"
+            className="text-secondaryColor underline">
+            Dolapo Oyesola
+          </a>
         </p>
       </div>
     </footer>
