@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 
 export default function RootLayout() {
   return (
-    <div className="selection:bg-secondaryColor xl:hidden relative">
+    <div className="selection:bg-secondaryColor relative">
       <Nav />
       <main>
         <Outlet />

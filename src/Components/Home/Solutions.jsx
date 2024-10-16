@@ -78,18 +78,18 @@ export default function Solutions() {
   }, []);
 
   return (
-    <section className="bg-white py-10 md:p-12 border-b-[.1px] border-primaryColor">
-      <h1 className="headers">
-        Solutions you can <br /> rely on
+    <section className="bg-white py-10 md:p-12 xl:p-20 xl:pr-0 xxl:pl-56 border-b-[.1px] border-primaryColor">
+      <h1 className="headers xl:w-[70%]">
+        Solutions you can <br className="xl:hidden" /> rely on
       </h1>
       <div
-        className="max-w-max flex overflow-scroll gap-6 mt-6 md:mt-12 md:select-none snap-x snap-mandatory"
+        className="hide-scrollbar max-w-max flex overflow-scroll gap-6 mt-6 md:mt-12 md:select-none snap-x snap-mandatory"
         ref={scrollContainerRef}>
         {solutions.map((item) => {
           return (
             <a
               href="#"
-              className="min-w-[87%] md:min-w-[40%] flex flex-col justify-between snap-center">
+              className="min-w-[87%] md:min-w-[40%] xl:min-w-[30%] flex flex-col justify-between snap-center">
               <div>
                 <img src={item.img} alt="" className="object-cover w-full" />
                 <p className="py-3 text-[1.1rem]">{item.title}</p>

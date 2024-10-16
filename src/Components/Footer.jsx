@@ -57,10 +57,6 @@ export default function Footer() {
       items: ["mParticle blog", "Resources", "Developer docs"],
     },
     {
-      title: "Get Started",
-      items: ["Contact sales", "Request pricing", "Request demo"],
-    },
-    {
       title: "Company",
       items: [
         "About",
@@ -71,6 +67,10 @@ export default function Footer() {
         "Customer",
         "Brand assets",
       ],
+    },
+    {
+      title: "Get Started",
+      items: ["Contact sales", "Request pricing", "Request demo"],
     },
   ];
 
@@ -83,8 +83,10 @@ export default function Footer() {
     }
   };
   return (
-    <footer className="text-white px-6 md:p-12 md:pb-6 pt-10 selection:text-primaryColor">
-      <h3 className="text-xl">See what's possible with us</h3>
+    <footer className="text-white px-6 md:p-12 xl:px-20 xxl:px-56 xl:pb-0 md:pb-6 pt-10 selection:text-primaryColor">
+      <h3 className="text-xl lg:text-xl xl:text-4xl">
+        See what's possible with us
+      </h3>
       <div className="mt-8">
         <div className="md:flex md:gap-10">
           {possible.map((item, index) => {
@@ -92,15 +94,19 @@ export default function Footer() {
               <div
                 key={index}
                 className="border-[.5px] p-6 mb-8 flex flex-col md:basis-1/2">
-                <h4 className="text-lg mb-2">{item.title}</h4>
-                <p className="mb-14">{item.subtitle}</p>
+                <h4 className="text-lg mb-2 xl:text-xl xxl:text-2xl">
+                  {item.title}
+                </h4>
+                <p className="mb-14 xl:mb-24 xl:w-[50%] xxl:w-[40%]">
+                  {item.subtitle}
+                </p>
                 <i className="fa-solid fa-arrow-right place-self-end"></i>
               </div>
             );
           })}
         </div>
 
-        <div className="footer-accordion border-t-[.5px]">
+        <div className="footer-accordion xl:hidden border-t-[.5px]">
           {footer.map((section, index) => (
             <div key={index} className="border-b-[.5px] pb-2 duration-300">
               <div
@@ -131,6 +137,23 @@ export default function Footer() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="hidden xl:flex flex-wrap gap-10 justify-between">
+          {footer.map((item, index) => {
+            return (
+              <ul key={index}>
+                <h1 className="opacity-[50%] text-lg mb-1">{item.title}</h1>
+                {item.items.map((itm, idx) => {
+                  return (
+                    <li key={idx} className="pb-3">
+                      {itm}
+                    </li>
+                  );
+                })}
+              </ul>
+            );
+          })}
         </div>
 
         <h1 className="my-10 text-2xl font-bold">mParticle</h1>

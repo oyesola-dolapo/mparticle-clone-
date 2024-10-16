@@ -8,7 +8,7 @@ export default function Home() {
   const do_more = [
     {
       key: "01",
-      title: "Less guesswork. Better results.",
+      title: `Less guesswork. Better results.`,
       subTitle: `AI-powered customer insights and predictions power informed
                  decisions at scale. With a strong data foundation as your single source or 
                  truth, your data is always accurate, secure, and usable.`,
@@ -35,12 +35,12 @@ export default function Home() {
 
   return (
     <main>
-      <section className="h-max w-screen bg-primaryColor text-white selection:text-primaryColor px-0">
-        <div className="w-full pt-10 px-6 md:px-20 lg:px-32">
+      <section className="h-max bg-primaryColor text-white selection:text-primaryColor px-0">
+        <div className="w-full pt-10 xl:pt-20 px-6 md:px-24 xl:px-32 xxl:px-80 lg:px-32">
           <h1 className="headers text-center">
             Turn customer data into customer joy
           </h1>
-          <p className="text-center text-[17px] md:text-lg lg:text-xl lg:w-[70%] lg:mx-auto lg:font-light lg:my-10 my-6">
+          <p className="text-center text-[17px] md:text-lg lg:text-xl lg:w-[70%] lg:mx-auto lg:font-light xxl:font-normal lg:my-10 my-6">
             mParticle is the choice for multi-channel consumer brands who want
             to deliver intelligent and adaptive customer experiences in the
             moments that matter, across any screen or device.
@@ -57,8 +57,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" w-screen relative mt-10 md:mt-20 select-none">
-          <div className="absolute top-0 left-0 mx-6">
+        <div className="relative mt-10 md:mt-20 select-none">
+          <div className="absolute top-0 left-0 md:left-1/2 md:-translate-x-1/2 mx-6 md:mx-auto">
             <Scroll />
           </div>
           <img
@@ -70,20 +70,22 @@ export default function Home() {
       </section>
 
       {/* DO MORE */}
-      <section className="text-black bg-white py-10 md:p-12 border-b-[.5px] border-primaryColor">
-        <h1 className="headers text-[38px]">Do more with more of your data</h1>
+      <section className="text-black bg-white py-10 md:p-12 xl:p-20 xxl:px-56 border-b-[.5px] border-primaryColor">
+        <h1 className="headers text-[38px] xl:w-[60%]">
+          Do more with more of your data
+        </h1>
         <div className="w-full">
           {do_more.map((item) => {
             return (
               <div
                 className={`mt-10 md:flex gap-10 items-center ${item.style}`}>
                 <div className="md:w-[50%]">
-                  <p className="text-sm mono">
+                  <p className="text-sm mono xl:text-xl">
                     <i class="fa-solid fa-circle text-secondaryColor"></i>{" "}
                     {item.key}
                   </p>
-                  <h4 className="text-[22px] mt-4">{item.title}</h4>
-                  <p className="opacity-[60%] mt-3">{item.subTitle}</p>
+                  <h4 className="text-[22px] mt-4 xl:text-4xl xl:w-1/2">{item.title}</h4>
+                  <p className="opacity-[60%] mt-3 xl:text-xl">{item.subTitle}</p>
                 </div>
                 <img
                   src={item.img}
