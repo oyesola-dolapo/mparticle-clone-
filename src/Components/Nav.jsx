@@ -86,11 +86,35 @@ export default function Nav() {
         },
       ],
     },
+    {
+      title: "Resources",
+      subtitle: "Resources",
+      items: [
+        {
+          title: "mParticle blog",
+        },
+        {
+          title: "Resources",
+        },
+        {
+          title: "Developer docs",
+        },
+        {
+          title: "Boost customer lifetime value",
+        },
+        {
+          title: "Drive operational efficiencies",
+        },
+        {
+          title: "Activate customer data from your warehouse",
+        },
+      ],
+    },
   ];
 
   return (
     <nav
-      className={`w-full relative transition-all duration-500 ${
+      className={`w-full max-h-screen relative transition-all duration-500 ${
         menu ? "h-screen bg-white text-black" : "h-max"
       }`}>
       <div
@@ -112,7 +136,7 @@ export default function Nav() {
       </div>
 
       {menu && (
-        <div className="px-6 h-full">
+        <div className="px-6 min-h-[85vh] flex flex-col overflow-auto">
           {nav.map((item, index) => (
             <div key={index}>
               <div
@@ -167,6 +191,15 @@ export default function Nav() {
               )}
             </div>
           ))}
+          <p className="font-semibold">Customer</p>
+          <div className="mt-auto text-sm">
+            <button className="w-full py-4 font-semibold text-center bg-secondaryColor rounded-md">
+              Sign up
+            </button>
+            <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black rounded-md">
+              Contact us
+            </button>
+          </div>
         </div>
       )}
     </nav>
