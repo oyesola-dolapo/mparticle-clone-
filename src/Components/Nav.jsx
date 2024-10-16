@@ -174,7 +174,7 @@ export default function Nav() {
                     <button className="w-full py-4 font-semibold text-center bg-secondaryColor rounded-md">
                       Sign up
                     </button>
-                    <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black rounded-md">
+                    <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black hover:bg-black hover:text-white duration-200 rounded-md">
                       Contact us
                     </button>
                   </div>
@@ -187,7 +187,7 @@ export default function Nav() {
             <button className="w-full py-4 font-semibold text-center bg-secondaryColor rounded-md">
               Sign up
             </button>
-            <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black rounded-md">
+            <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black hover:bg-black hover:text-white duration-200 rounded-md">
               Contact us
             </button>
           </div>
