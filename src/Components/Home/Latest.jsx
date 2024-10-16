@@ -68,7 +68,7 @@ export default function Latest() {
     <section className="bg-white py-10 md:p-12 border-b-[.1px] border-primaryColor">
       <h1 className="text-2xl md:text-3xl">Latest from mParticle</h1>
       <div
-        className="w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
+        className="max-w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
         ref={scrollContainerRef}>
         {Latest.map((item) => {
           return (
@@ -97,14 +97,14 @@ export default function Latest() {
         </div>
         <div className="flex gap-4">
           <button
-            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor"
+            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor disabled:opacity-[40%]"
             disabled={activeIndex === 0}
             onClick={scrollLeft}>
             <i class="fa-solid fa-arrow-left text-black"></i>
           </button>
           <button
-            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor"
-            disabled={activeIndex === 3}
+            className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor disabled:opacity-[40%]"
+            disabled={activeIndex === Latest.length - 1}
             onClick={scrollRight}>
             <i class="fa-solid fa-arrow-right text-black"></i>
           </button>

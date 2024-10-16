@@ -123,7 +123,7 @@ export default function Nav() {
               </div>
 
               {openSubMenuIndex === index && (
-                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-6 pb-6 overflow-auto">
+                <div className="bg-white flex flex-col min-h-screen w-full absolute top-0 left-0 px-6 pt-6 pb-6 overflow-auto">
                   <div className="flex justify-between items-center">
                     <p
                       className="font-semibold"
@@ -142,18 +142,20 @@ export default function Nav() {
                     {item.subtitle}
                   </p>
 
-                  {item.items.map((itm, idx) => (
-                    <div
-                      key={idx}
-                      className="border-b-[.5px] border-black py-4">
-                      <h3>{itm.title}</h3>
-                      <p className="w-[60%] text-sm font-light">
-                        {itm.subtitle}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="mb-6">
+                    {item.items.map((itm, idx) => (
+                      <div
+                        key={idx}
+                        className="border-b-[.5px] border-black py-4">
+                        <h3>{itm.title}</h3>
+                        <p className="w-[60%] text-sm font-light">
+                          {itm.subtitle}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
 
-                  <div className="mt-6 text-sm">
+                  <div className="mt-auto text-sm">
                     <button className="w-full py-4 font-semibold text-center bg-secondaryColor rounded-md">
                       Sign up
                     </button>
