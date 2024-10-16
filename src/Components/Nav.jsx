@@ -123,7 +123,7 @@ export default function Nav() {
               </div>
 
               {openSubMenuIndex === index && (
-                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-6 pb-6 overflow-auto">
+                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-6 pb-6 overflow-scroll">
                   <div className="flex justify-between items-center">
                     <p
                       className="font-semibold"
