@@ -76,7 +76,7 @@ export default function Home() {
           {do_more.map((item) => {
             return (
               <div className={`mt-10 md:flex gap-10 items-center ${item.style}`}>
-                <div className="w-[50%]">
+                <div className="md:w-[50%]">
                   <p className="text-sm mono">
                     <i class="fa-solid fa-circle text-secondaryColor"></i>{" "}
                     {item.key}
