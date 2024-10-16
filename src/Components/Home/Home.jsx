@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <main>
       <section className="h-max w-screen bg-primaryColor text-white selection:text-primaryColor px-0">
-        <div className="w-full pt-28 px-6">
+        <div className="w-full pt-10 px-6">
           <h1 className="headers text-center">
             Turn customer data into customer joy
           </h1>

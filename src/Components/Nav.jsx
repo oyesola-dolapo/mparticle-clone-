@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 export default function Nav() {
   const [navbarBg, setNavbarBg] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null);
 
   const handleScroll = () => {
-    if (window.scrollY > 1) {
+    if (window.scrollY > 0 && !menu) {
       setNavbarBg(true);
     } else {
       setNavbarBg(false);
@@ -14,7 +15,13 @@ export default function Nav() {
 
   const handleMenu = () => {
     setMenu(!menu);
-    console.log(menu);
+    document.body.style.overflow = menu ? "auto" : "hidden";
+  };
+
+  const handleSubMenu = (index) => {
+    setOpenSubMenuIndex(openSubMenuIndex === index ? null : index);
+    document.body.style.overflow =
+      openSubMenuIndex !== null ? "auto" : "hidden";
   };
 
   useEffect(() => {
@@ -22,20 +29,143 @@ export default function Nav() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [menu]);
+
+  const nav = [
+    {
+      title: "Platform",
+      subtitle: "Capabilities",
+      items: [
+        {
+          title: "Real-time data infrastructure",
+          subtitle: "Orchestrate end-to-end data seamlessly",
+        },
+        {
+          title: "Analytics",
+          subtitle: "Understand customer journeys & behavior",
+        },
+        {
+          title: "Customer 360",
+          subtitle: "Unifying data for a complete customer view",
+        },
+        {
+          title: "Artificial intelligence",
+          subtitle: "Optimize customer engagement at scale",
+        },
+        {
+          title: "Segmentation",
+          subtitle: "Deliver personalized experiences in real time",
+        },
+        {
+          title: "Governance",
+          subtitle: "Trust your data is secure, private and usable",
+        },
+      ],
+    },
+    {
+      title: "Solutions",
+      items: [
+        {
+          title: "Create a customer 360",
+        },
+        {
+          title: "Improve understanding of customers",
+        },
+        {
+          title: "Lower customer acquisition cost",
+        },
+        {
+          title: "Boost customer lifetime value",
+        },
+        {
+          title: "Drive operational efficiencies",
+        },
+        {
+          title: "Activate customer data from your warehouse",
+        },
+      ],
+    },
+  ];
 
   return (
     <nav
-      className={`w-full bg-primaryColor z-50 px-6 absolute top-0 left-0 py-[1.8rem]  ${
+      className={`w-full relative transition-all duration-500 ${
         menu ? "h-screen bg-white text-black" : "h-max"
-      } ${navbarBg ? "bg-white" : "bg-transparent text-white"}`}>
-      <div className="w-full flex justify-between items-center">
-        <h1 className="font-bold text-lg sm:text-xl select-none">mParticle</h1>
-        <div className="flex items-center gap-6">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-bars text-xl" onClick={handleMenu}></i>
+      }`}>
+      <div
+        className={`w-full px-6 py-[1.8rem] flex justify-between items-center transition-all duration-300 ${
+          navbarBg ? "bg-white text-black" : "bg-transparent text-white"
+        }`}>
+        <h1
+          className={`font-bold text-lg sm:text-xl select-none ${
+            menu ? "text-black" : ""
+          }`}>
+          mParticle
+        </h1>
+        <div className={`flex items-center gap-6 ${menu ? "text-black" : ""}`}>
+          <i className="fa-solid fa-magnifying-glass"></i>
+          <i
+            className="fa-solid fa-bars text-xl cursor-pointer"
+            onClick={handleMenu}></i>
         </div>
       </div>
+
+      {menu && (
+        <div className="px-6 h-full">
+          {nav.map((item, index) => (
+            <div key={index}>
+              <div
+                className="flex items-center justify-between mb-4 cursor-pointer"
+                onClick={() => handleSubMenu(index)}>
+                <p className="font-semibold">{item.title}</p>
+                <i className="fa-solid fa-chevron-right"></i>
+              </div>
+
+              {openSubMenuIndex === index && (
+                <div className="bg-white h-full w-full absolute top-0 left-0 px-6 pt-2 pb-6 overflow-scroll">
+                  <div className="flex justify-between items-center">
+                    <p
+                      className="font-semibold"
+                      onClick={() => handleSubMenu(null)}>
+                      <i className="fa-solid fa-chevron-left"></i> &nbsp; Back
+                    </p>
+                    <i
+                      className="fa-solid fa-x"
+                      onClick={() => {
+                        handleMenu();
+                        handleSubMenu(null);
+                      }}></i>
+                  </div>
+
+                  <p className="mono mt-4 text-sm font-light">
+                    {item.subtitle}
+                  </p>
+
+                  {item.items.map((itm, idx) => (
+                    <div
+                      key={idx}
+                      className="border-b-[.5px] border-black py-4">
+                      <h3>{itm.title}</h3>
+                      <p className="w-[60%] text-sm font-light">
+                        {itm.subtitle}
+                      </p>
+                    </div>
+                  ))}
+
+                  <div className="mt-6 text-sm">
+                    <button className="w-full py-4 font-semibold text-center bg-secondaryColor rounded-md">
+                      Sign up
+                    </button>
+                    <button className="w-full py-3 mt-4 font-semibold text-center border-[.5px] border-black rounded-md">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
