@@ -64,6 +64,7 @@ export default function Nav() {
     },
     {
       title: "Solutions",
+      subtitle: "Use cases",
       items: [
         {
           title: "Create a customer 360",
@@ -137,7 +138,7 @@ export default function Nav() {
                       }}></i>
                   </div>
 
-                  <p className="mono mt-4 text-sm font-light">
+                  <p className="mono mt-4 text-sm font-light uppercase">
                     {item.subtitle}
                   </p>
 
