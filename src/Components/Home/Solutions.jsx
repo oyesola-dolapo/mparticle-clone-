@@ -83,7 +83,7 @@ export default function Solutions() {
         Solutions you can <br /> rely on
       </h1>
       <div
-        className="w-full flex overflow-scroll gap-6 mt-6 md:mt-12 md:select-none snap-x snap-mandatory"
+        className="max-w-max flex overflow-scroll gap-6 mt-6 md:mt-12 md:select-none snap-x snap-mandatory"
         ref={scrollContainerRef}>
         {solutions.map((item) => {
           return (
