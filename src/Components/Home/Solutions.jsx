@@ -113,7 +113,7 @@ export default function Solutions() {
             />
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 mr-8">
           <button
             className="h-[3rem] w-[3rem] rounded-md bg-secondaryColor disabled:opacity-[40%]"
             disabled={activeIndex === 0}
