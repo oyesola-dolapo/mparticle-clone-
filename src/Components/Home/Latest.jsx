@@ -68,7 +68,7 @@ export default function Latest() {
     <section className="bg-white py-10 md:p-12 border-b-[.1px] border-primaryColor">
       <h1 className="text-2xl md:text-3xl">Latest from mParticle</h1>
       <div
-        className="max-w-full flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
+        className="max-w-max flex overflow-scroll gap-6 mt-6 snap-x snap-mandatory"
         ref={scrollContainerRef}>
         {Latest.map((item) => {
           return (
