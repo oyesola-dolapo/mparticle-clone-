@@ -57,14 +57,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative mt-10 md:mt-20 select-none">
+        <div className="relative h-max mt-10 md:mt-20 select-none">
           <div className="absolute top-0 left-0 md:left-1/2 md:-translate-x-1/2 mx-6 md:mx-auto">
             <Scroll />
           </div>
           <img
             src="./assets/images/heroImg.avif"
             alt=""
-            className="h-[50vh] md:h-[90vh] md:object-contain w-full object-cover"
+            className="h-[50vh] md:h-[70vh] w-full object-cover"
           />
         </div>
       </section>
