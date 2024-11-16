@@ -64,7 +64,7 @@ export default function Home() {
           <img
             src="./assets/images/heroImg.avif"
             alt=""
-            className="h-[50vh] md:h-[70vh] w-full object-cover"
+            className="h-[50vh] md:h-[70vh] lg:h-full w-full object-cover"
           />
         </div>
       </section>
